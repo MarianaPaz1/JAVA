@@ -6,22 +6,21 @@ public class aula02_ex8 {
 
 	public static void main(String[] args) {
 	
-////		Scanner
-//		Scanner leia = new Scanner(System.in);
-//				
-////		Vari·veis		
-//		double custo, porcentagem, impostos;
-//		porcentagem = 0.28;
-//		impostos = 0.45;
-//		
-//		//		FunÁ„o
-//		System.out.println("Digite aqui o custo do carro: ");
-//		custo = leia.nextInt();
-//		
-//		custo = (custo + porcentagem + impostos)*100;
-//		System.out.println("O custo do seu novo carro È : " + custo + "reais");
-//		
-//		
+//		Scanner
+		Scanner leia = new Scanner(System.in);
+				
+//		Vari√°veis		
+		double custo, porcentagem, impostos, custo1,custo2, valorTotal;
+		porcentagem = 28;
+		impostos = 45;
+		custo=50000;
+		
+		//		Fun√ß√£o
+		custo1=(custo/100)*impostos;
+		custo2=(custo/100)*porcentagem;
+		valorTotal = custo + custo1 + custo2;
+		
+		System.out.printf("O custo do seu novo carro √© %.2f : ", valorTotal);		
 	}
 
 }
