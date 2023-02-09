@@ -9,26 +9,42 @@ public class atv3_ex4 {
 	public static void main(String[] args) {
 //		Scanner
 		Scanner leia = new Scanner(System.in);
-//		Vari�veis		
-//		List listaVertebrado = new ArrayList();
-//		List listaInvertebrado = new ArrayList();
-		String verificar;
+		String palavra1, palavra2, palavra3;
+		System.out.println("Entre com a primeira palavra: ");
+		palavra1 = leia.next();
+		System.out.println("Entre com a segunda palavra: ");
+		palavra2 = leia.next();
+		System.out.println("Entre com a terceira palavra: ");
+		palavra3 = leia.next();
 		
-//		listaVertebrado.add("Ave");
-//		listaVertebrado.add("Mam�fero");
-//		listaInvertebrado.add("Inseto");
-		
-//		Fun��o
-//		System.out.println("Lista de Vertebrados: " + listaVertebrado);
-//		System.out.println("Lista de Invertebrados: " + listaInvertebrado);
-		System.out.println("Digite aqui: ");
-		verificar = leia.next();
-		
-		
-		if(verificar == "ave") {
-			System.out.println("O" + verificar + "Faz parte da lista de Vertebrados.");
-		}else if(verificar != verificar) {
-			System.out.println("O" + verificar + "Faz parte da lista de Invertebrados.");
+		if(palavra1.equalsIgnoreCase("vertebrado")) {
+			if(palavra2.equalsIgnoreCase("ave")) {
+				if(palavra3.equalsIgnoreCase("carnívoro")) {
+					System.out.println("É uma águia ");
+				}else {
+					System.out.println("É uma pomba");
+				}
+			}else{
+				if(palavra3.equalsIgnoreCase("onivoro")) {
+					System.out.println("É um homem");	
+				}else {
+					System.out.println("É uma vaca");	
+				}
+			}
+		}else {
+			if(palavra2.equalsIgnoreCase("inseto")) {
+				if(palavra3.equalsIgnoreCase("hematofago")) {
+					System.out.println("É uma pulga");	
+				}else {
+					System.out.println("É uma lagarta");	
+				}
+			}else {
+				if(palavra3.equalsIgnoreCase("hematofago")) {
+					System.out.println("É uma sanguessuga");
+				}else {
+					System.out.println("É uma minhoca");
+				}
+			}
 		}
 
 	}
