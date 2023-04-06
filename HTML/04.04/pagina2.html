@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="style.css" />
+    <link rel="stylesheet" type="text/css" href="assets/style.css" />
     <title>Primeira atividade de FrontEnd</title>
   </head>
   <body>
@@ -26,40 +26,41 @@
     <section class="ben">
       <div class="form1">
         <h1> Cadastre-se</h1>
-        <form action="#" method="POST">
+        <form action="#" method="POST" onsubmit="senhaOk()">
 
-            <label>Nome</label>
+            <label for="nome">Nome</label>
             <div class="container">
-                <input type="text" required name="nome" autofocus>
+                <input type="text" required id="nome" name="nome" autofocus onkeyup="validaNome()">
             </div>
-            <label>Sobrenome</label>
+            <div id="txt"></div>
+            <label for="sobrenome">Sobrenome</label>
             <div class="container">
-                <input type="text" required name="sobrenome" autofocus>
+                <input type="text" required id="sobrenome" name="sobrenome" autofocus onkeyup="validaSnome()">
             </div>
+            <div id="txt1"></div>
 
-
-            <label>E-mail</label>
+            <label for="email">E-mail</label>
             <div class="container">
-                <input type="email" required name="email" autofocus>
+                <input type="email" required name="email"  id="email" autofocus onkeyup="validaEmail()">
             </div>
-
-            <label>Senha</label>
+            <div id="txt2"></div>
+            <label for="senha">Senha</label>
             <div class="container">
-                <input type="password" required name="senha" autofocus>
-            </div>
-
-            <label>Confirmar Senha</label>
-            <div class="container">
-                <input type="password" required name="confirmarSenha" autofocus>
+                <input type="password" required name="senha" id="senha"  autofocus>
             </div>
 
+            <label for="senha2">Confirmar Senha</label>
+            <div class="container">
+                <input type="password" required id="senha2" onchange="conferirSenha()" name="senha2" autofocus>
+            </div>
+            <div id="txt3"></div>
 
             <div >
                 <input type="checkbox" required name="aceitar">
                 <label><a href="#">Aceitar os termos de uso</a></label>
 
             </div>
-            <button type="submit" class="btnLogin">Criar Conta</button>
+            <button type="submit" class="btnLogin" onclick="enviarForm()">Criar Conta</button>
 
         </form>
     </div>
@@ -68,5 +69,7 @@
        <a href="#topo"><footer>
       <p>GEN@2023 - Todos os direitos reservados</p>
   </footer>
+  <!-- JS -->
+<script src="assets/scripts.js"></script>
   </body>
 </html>
